@@ -91,7 +91,19 @@ const LayupSequenceControl = () => {
                         <CardContent className="p-4 sm:p-6">
                             <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto">
                                 <code className="text-sm">
-                                    {`function layupSequence(n: number): bigint {
+                                    {`/**
+ * Calculates the nth term in the layup sequence where:
+ * - For odd n:  S(n) = 2S(n-1) - S(n-2)
+ * - For even n: S(n) = S(n-1) + S(n-2)
+ * 
+ * Base cases:
+ * S(1) = 1
+ * S(2) = 2
+ * 
+ * Time Complexity: O(n) - requires n-2 iterations to compute the nth term
+ */
+
+function layupSequence(n: number): bigint {
     // Handle base cases
     if (n === 1) return 1n;
     if (n === 2) return 2n;
