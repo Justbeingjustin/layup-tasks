@@ -61,11 +61,17 @@ const config: Config = {
 			},
 			animation: {
 				'bounce-slow': 'bounce 3s infinite',
-				'fade-in': 'fadeIn 1s ease-in',
+				'fade-in': 'fade-in 1s cubic-bezier(0.4, 0, 0.2, 1)',
+				'fade-in-delayed': 'fade-in 1s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards',
+				'fade-up': 'fade-up 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
 			},
 			keyframes: {
-				fadeIn: {
-					'0%': { opacity: '0', transform: 'translateY(10px)' },
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' },
+				},
+				'fade-up': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' },
 				},
 			},

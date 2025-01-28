@@ -102,10 +102,12 @@ const AirplaneControl = () => {
     };
 
     return (
-        <div className="flex flex-col items-center gap-6 p-4 sm:p-6 bg-gray-50 min-h-screen">
-            <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">✈️ Airplane Control</h1>
+        <div className="relative flex flex-col gap-6 p-4 sm:p-6 min-h-screen">
+            <h1 className="relative text-3xl sm:text-4xl font-bold mb-2 tracking-tight text-blue-500 animate-fade-up">
+                Flight Simulator
+            </h1>
 
-            <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 w-full max-w-[1200px] items-start">
+            <div className="relative flex flex-col lg:flex-row gap-4 sm:gap-6 w-full max-w-[1200px] items-start animate-fade-in-delayed opacity-0">
                 <Card className="w-full lg:w-80 shadow-lg">
                     <CardContent className="p-4 sm:p-6">
                         <div className="flex flex-col gap-4 sm:gap-6">
